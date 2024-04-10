@@ -1,1 +1,200 @@
-<p>statistics works!</p>
+<div class="row">
+  <div class="col-12">
+    <div
+      class="page-title-box d-sm-flex align-items-center justify-content-between"
+    >
+      <h4 class="mb-sm-0 font-size-18">Dashboard</h4>
+    </div>
+  </div>
+</div>
+<!-- end page title -->
+
+<div class="row">
+  <div class="col-lg-6">
+    <div class="card">
+      <div class="card-body">
+        <div class="row">
+          <div class="col-lg-6">
+            <div class="d-flex">
+              <div class="flex-shrink-0 me-3">
+                <img
+                  src="http://localhost:3000/storage/{{ user.image }}"
+                  alt=""
+                  class="avatar-md rounded-circle img-thumbnail"
+                />
+              </div>
+              <div class="flex-grow-1 align-self-center">
+                <div class="text-muted">
+                  <p class="mb-2">Welcome Back</p>
+                  <h5 class="mb-1">{{ user.fullname }}</h5>
+                  @for ( tag of user.tags; track tag ) {
+                  <p class="mb-0">{{ tag }}</p>
+                  }
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- end row -->
+      </div>
+    </div>
+  </div>
+
+
+
+<div class="col-sm-3">
+  <div class="card">
+    <div class="card-body">
+      <div class="d-flex align-items-center justify-content-between mb-2">
+        <h4 class="font-size-14 mb-0">Projects</h4>
+        <!-- User icon -->
+         <i class="fas fa-folder fa-2x mr-4"></i>
+      </div>
+      <div class="text-muted mt-3">
+        <h4>{{projects.length}}</h4>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="col-sm-3">
+  <div class="card">
+    <div class="card-body">
+      <div class="d-flex align-items-center justify-content-between mb-2">
+        <h4 class="font-size-14 mb-0">Users</h4>
+        <!-- User icon -->
+         <i class="fas fa-users fa-2x mr-4"></i>
+      </div>
+      <div class="text-muted mt-3">
+        <h4>{{users.length}}</h4>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+<!-- end row -->
+
+<div class="row">
+  <div class="col-sm-3">
+    <div class="card">
+      <div class="card-body">
+        <div class="d-flex align-items-center mb-3">
+          <div class="avatar-xs me-3">
+            <span
+              class="avatar-title rounded-circle bg-primary bg-soft text-primary font-size-18"
+            >
+              <i class="bx bx-copy-alt"></i>
+            </span>
+          </div>
+          <h4 class="font-size-14 mb-0">Backlog</h4>
+        </div>
+        <div class="text-muted mt-4">
+          <h4>{{backlog}} <i class="mdi mdi-chevron-up ms-1 text-success"></i></h4>
+          <div class="d-flex">
+            <span class="badge badge-soft-success font-size-12"> + 0.2% </span>
+            <span class="ms-2 text-truncate">Evolution</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col-sm-3">
+    <div class="card">
+      <div class="card-body">
+        <div class="d-flex align-items-center mb-3">
+          <div class="avatar-xs me-3">
+            <span
+              class="avatar-title rounded-circle bg-primary bg-soft text-primary font-size-18"
+            >
+              <i class="bx bx-copy-alt"></i>
+            </span>
+          </div>
+          <h4 class="font-size-14 mb-0">In Progress</h4>
+        </div>
+        <div class="text-muted mt-4">
+          <h4>{{inprogress}} <i class="mdi mdi-chevron-up ms-1 text-success"></i></h4>
+          <div class="d-flex">
+            <span class="badge badge-soft-success font-size-12"> + 0.2% </span>
+            <span class="ms-2 text-truncate">Evolution</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-sm-3">
+    <div class="card">
+      <div class="card-body">
+        <div class="d-flex align-items-center mb-3">
+          <div class="avatar-xs me-3">
+            <span
+              class="avatar-title rounded-circle bg-primary bg-soft text-primary font-size-18"
+            >
+              <i class="bx bx-archive-in"></i>
+            </span>
+          </div>
+          <h4 class="font-size-14 mb-0">Completed</h4>
+        </div>
+        <div class="text-muted mt-4">
+          <h4>{{completed}}<i class="mdi mdi-chevron-up ms-1 text-success"></i></h4>
+          <div class="d-flex">
+            <span class="badge badge-soft-success font-size-12"> + 0.2% </span>
+            <span class="ms-2 text-truncate">Evolution</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-sm-3">
+    <div class="card">
+      <div class="card-body">
+        <div class="d-flex align-items-center mb-3">
+          <div class="avatar-xs me-3">
+            <span
+              class="avatar-title rounded-circle bg-primary bg-soft text-primary font-size-18"
+            >
+              <i class="bx bx-purchase-tag-alt"></i>
+            </span>
+          </div>
+          <h4 class="font-size-14 mb-0">In Hold</h4>
+        </div>
+        <div class="text-muted mt-4">
+          <h4>{{inhold}} <i class="mdi mdi-chevron-up ms-1 text-success"></i></h4>
+
+          <div class="d-flex">
+            <span class="badge badge-soft-warning font-size-12"> 0% </span>
+            <span class="ms-2 text-truncate">Evolution</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- end row -->
+
+<div class="row">
+  <div class="col-xl-12">
+    <div class="card">
+      <div class="card-body">
+        <h4 class="card-title mb-4">Tasks</h4>
+        <div style="text-align: center">
+          <div id="chart">
+            <apx-chart
+              [series]="chartOptions.series!"
+              [chart]="chartOptions.chart!"
+              [xaxis]="chartOptions.xaxis!"
+              [dataLabels]="chartOptions.dataLabels!"
+              [grid]="chartOptions.grid!"
+              [stroke]="chartOptions.stroke!"
+              [title]="chartOptions.title!"
+            ></apx-chart>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+

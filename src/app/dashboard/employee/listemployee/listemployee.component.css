@@ -1,0 +1,19 @@
+.card-body{
+    height: 220px;
+}
+
+.tag-container {
+  display: flex !important;
+  flex-wrap: nowrap !important; 
+  overflow: hidden !important; 
+}
+
+.tag {
+  margin-right: 5px; 
+}
+
+#more-tags {
+  margin-right: 5px; 
+}.tag-container{
+
+}
